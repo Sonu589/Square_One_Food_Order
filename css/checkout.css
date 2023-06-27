@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+/* -----------------
+fonts 
+--------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ----------------------------
+variables
+--------------------------------------- */
+
+:root{
+  --main-color:#eaa023;
+  --dark:#0c1023;
+  --dark-light:#191f3a;
+  --white:#ffffff;
+  --white-light:#c8c8c8;
+  --shadow:0 0 15px rgba(0,0,0,0.25);
+  --border-color:#b83120;
+  --cursive-font:'Dancing Script',cursive;
+  scroll-behavior:smooth;
+}
+
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+
+  /* background-color: #e8eef3; */
+  
+}
+
+
+
+
+
+
+/* ----------------------------------------- */
+
+.nav ul{
+  list-style: none;
+}
+.nav a{
+  text-decoration: none;
+}
+.container-box{
+  max-width: 1170px;
+  margin: auto;
+
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.align-items-center{
+  align-items: center;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+/* header */
+.header{
+  background-color: var(--dark-light);
+  padding: 12px 0 ;
+  line-height: 1.5;
+  position: sticky;
+  margin-bottom: 20px;
+}
+.header .logo a{
+    
+  font-size: 30px;
+  color: var(--white);
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--main-color);
+  font-family: var(--cursive-font);
+  
+}
+.header .logo,
+.header .nav{
+  padding:0 15px ;
+}
+.header .nav ul li{
+  display: inline-block;
+  margin-left: 40px;
+
+}
+.header .nav ul li a{
+  display: block;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--white);
+  padding: 10px 0;
+  transition: all 0.5s ease;
+}
+.nav a:before{
+	content:"";
+	position:absolute;
+	width:0;
+	left:8%;
+	top:100%;
+	height:4px;
+	background-color:orange;
+	transition:all 0.7s linear;
+}
+.nav a:hover:before{
+	width:100%;
+}
+.header .nav ul li a:hover{
+  color: var(--main-color);
+}
+
+/* ----------------------checkout----------------------- */
+/* body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+} */
+h2{
+    text-align:left;
+}
+
+/* * {
+    box-sizing: border-box;
+} */
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+}
+
+.col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+}
+
+.col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+}
+
+.col-25,.col-50,.col-75 {
+    padding: 0 16px;
+}
+
+.container {
+    background-color: #FFFFFF;
+    padding: 3px 18px 13px 18px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    box-shadow: 0 0 2rem 0 rgba(168, 180, 194, 0.37);
+    
+}
+
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid rgb(130, 26, 26);
+    border-radius: 1px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+#email{
+	width:100%;
+	height:50px;
+}
+#zip{
+	width:100%;
+	height:45px;
+}
+#ccnum{
+	width:100%;
+	height:45px;
+}
+#expyear{
+	width:100%;
+	height:45px;
+}
+#cvv{
+	width:100%;
+	height:45px;
+}
+.btn {
+    /* background-color: #01BAEF; */
+    background-color: var(--dark-light);
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+	
+    box-shadow: 0 0 1rem 0 rgba(99, 123, 150, 0.329);
+
+}
+
+.btn:hover {
+    /* background-color: #0CBABA; */
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+a {
+    color: #2196F3;
+    text-decoration: none;
+    font-size: small;
+}
+a:hover{
+    color: var(--main-color);
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns 
+    stack on top of each other instead of next to each other (also change the direction 
+    - make the "cart" column go on top) 
+*/
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+
